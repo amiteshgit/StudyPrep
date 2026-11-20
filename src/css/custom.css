@@ -1,0 +1,47 @@
+/* Calm, reading-first theme. Comfortable line height and short lines. */
+:root {
+  --ifm-color-primary: #1f6f8b;
+  --ifm-color-primary-dark: #1c6580;
+  --ifm-color-primary-darker: #1a6078;
+  --ifm-color-primary-darkest: #154d62;
+  --ifm-color-primary-light: #227898;
+  --ifm-color-primary-lighter: #247da0;
+  --ifm-color-primary-lightest: #2b94bb;
+  --ifm-font-size-base: 106%;
+  --ifm-line-height-base: 1.75;
+  --ifm-heading-font-weight: 650;
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(31, 111, 139, 0.12);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #6cc4e0;
+  --ifm-color-primary-dark: #4fb8d9;
+  --ifm-color-primary-darker: #41b2d5;
+  --ifm-color-primary-darkest: #2297bb;
+  --ifm-color-primary-light: #89d0e6;
+  --ifm-color-primary-lighter: #97d6e9;
+  --ifm-color-primary-lightest: #bde6f3;
+  --docusaurus-highlighted-code-line-bg: rgba(108, 196, 224, 0.16);
+}
+
+/* Keep lines short enough to read comfortably */
+.theme-doc-markdown {
+  max-width: 46rem;
+}
+
+.markdown h1 { margin-bottom: 1.25rem; }
+.markdown h2 { margin-top: 2.5rem; }
+.markdown p, .markdown li { font-size: 1.02rem; }
+.markdown pre { margin: 1.25rem 0; }
+
+
+/* Each question gets an accent bar so it is easy to spot while scrolling */
+.theme-doc-markdown h3 {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+/* Lines wider for code-heavy Q&A pages */
+.theme-doc-markdown { max-width: 52rem; }
