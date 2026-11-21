@@ -89,6 +89,15 @@ const config = {
               { label: '9. Video Streaming', to: '/system-design/video-streaming' },
             ],
           },
+          {
+            type: 'dropdown',
+            label: 'Security',
+            position: 'left',
+            items: [
+              { label: '1. Automated Remediation', to: '/vulnerability-remediation' },
+              { label: '2. Version and Patch Updates', to: '/vulnerability-remediation/version-updates' },
+            ],
+          },
           { href: 'https://github.com/amiteshgit/StudyPrep', label: 'GitHub', position: 'right' },
         ],
       },
