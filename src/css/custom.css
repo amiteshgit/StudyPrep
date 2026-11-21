@@ -33,6 +33,14 @@
 .markdown h1 { margin-bottom: 1.25rem; }
 .markdown h2 { margin-top: 2.5rem; }
 .markdown p, .markdown li { font-size: 1.02rem; }
+
+/* Mermaid sizes each box before the diagram is placed on the page. Keep
+   the page's paragraph size off diagram labels, or the text grows after
+   measuring, wraps one more line, and gets cut off at the bottom. */
+.markdown .docusaurus-mermaid-container p,
+.markdown .docusaurus-mermaid-container li {
+  font-size: inherit;
+}
 .markdown pre { margin: 1.25rem 0; }
 
 
