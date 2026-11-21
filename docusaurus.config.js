@@ -16,8 +16,11 @@ const config = {
 
   onBrokenLinks: 'throw',
   markdown: {
+    mermaid: true,
     hooks: { onBrokenMarkdownLinks: 'warn' },
   },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
@@ -47,6 +50,7 @@ const config = {
         items: [
           { to: '/spring-boot-interview', label: 'Spring Boot', position: 'left' },
           { to: '/java-interview', label: 'Java', position: 'left' },
+          { to: '/iam', label: 'IAM', position: 'left' },
           { href: 'https://github.com/amiteshgit/StudyPrep', label: 'GitHub', position: 'right' },
         ],
       },
