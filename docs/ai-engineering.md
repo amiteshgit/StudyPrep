@@ -493,5 +493,5 @@ Trim prompts and retrieved text, cache repeated work, route easy questions to a 
 ---
 
 :::info[Where to next]
-AI products run on the same foundations as any other service. For the platform side, revisit [Spring Boot Interview Questions](./spring-boot-interview.md) and [Kubernetes](./kubernetes.md). For access control that keeps tools and data safe, see [IAM](./iam.md).
+AI products run on the same foundations as any other service. For the platform side, revisit [Spring Boot Interview Questions](./spring-boot-interview.md) and [Kubernetes](./kubernetes.md). For access control that keeps tools and data safe, see [IAM](./iam.md). To design the systems around them at scale, continue with [System Design](./system-design/index.md).
 :::
