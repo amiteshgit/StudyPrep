@@ -19,7 +19,8 @@ Every design choice trades one good thing for another: speed vs cost, consistenc
 ## How this course works
 
 1. **[Building Blocks](./01-building-blocks.md)**: the parts every design uses, such as load balancers, caches, databases, queues and CDNs. Read this first.
-2. **Six designs**: each design page has the same layout, so you always know where to look.
+2. **[Distributed Systems](./02-distributed-systems.md) and [Transactions Across Services](./03-distributed-transactions.md)**: the theory underneath, covering how machines agree, stay consistent, and keep multi-service actions correct.
+3. **Six designs**: each design page has the same layout, so you always know where to look.
 
 | Part | What you get |
 | --- | --- |
@@ -75,11 +76,13 @@ Estimates don't need to be exact. They tell you **which part will break first**.
 ## The pages
 
 1. [Building Blocks](./01-building-blocks.md): load balancers, caching, CDN, databases, replication, sharding, consistent hashing, queues, and CAP
-2. [URL Shortener](./02-url-shortener.md): unique IDs, base62 codes, and read-heavy caching
-3. [Rate Limiter](./03-rate-limiter.md): token bucket, sliding windows, and counters shared across servers
-4. [Chat System](./04-chat-system.md): WebSockets, message routing, ordering, presence, and offline delivery
-5. [News Feed](./05-news-feed.md): fan-out on write vs read, feed caches, and cursor pagination
-6. [Notification System](./06-notification-system.md): per-channel queues, retries, deduplication, and user preferences
-7. [Video Streaming](./07-video-streaming.md): direct uploads, transcoding pipelines, adaptive bitrate, and CDNs
+2. [Distributed Systems](./02-distributed-systems.md): failure detection, consistency models, PACELC, quorums, logical clocks, Raft consensus, CRDTs, Bloom filters, and Merkle trees
+3. [Transactions Across Services](./03-distributed-transactions.md): two-phase commit, sagas, the transactional outbox, exactly-once processing, and distributed locks with fencing tokens
+4. [URL Shortener](./04-url-shortener.md): unique IDs, base62 codes, and read-heavy caching
+5. [Rate Limiter](./05-rate-limiter.md): token bucket, sliding windows, and counters shared across servers
+6. [Chat System](./06-chat-system.md): WebSockets, message routing, ordering, presence, and offline delivery
+7. [News Feed](./07-news-feed.md): fan-out on write vs read, feed caches, and cursor pagination
+8. [Notification System](./08-notification-system.md): per-channel queues, retries, deduplication, and user preferences
+9. [Video Streaming](./09-video-streaming.md): direct uploads, transcoding pipelines, adaptive bitrate, and CDNs
 
 The designs reuse each other's ideas. The rate limiter appears again in notifications, and the CDN in news feed and video. Read them in order the first time.

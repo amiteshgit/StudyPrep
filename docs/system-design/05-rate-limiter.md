@@ -2,13 +2,13 @@
 id: rate-limiter
 slug: /system-design/rate-limiter
 title: Rate Limiter
-sidebar_label: 3. Rate Limiter
+sidebar_label: 5. Rate Limiter
 description: Design a distributed rate limiter covering where to place it, the token bucket, fixed and sliding window algorithms, shared counters in Redis, and 429 responses.
 ---
 
 # Rate Limiter
 
-The [URL shortener](./02-url-shortener.md) showed how fast a single viral link can bring traffic. A **rate limiter** decides how many requests each client may make in a period of time, such as "100 requests per minute per user". Anything above that is rejected.
+The [URL shortener](./04-url-shortener.md) showed how fast a single viral link can bring traffic. A **rate limiter** decides how many requests each client may make in a period of time, such as "100 requests per minute per user". Anything above that is rejected.
 
 It protects your servers from overload, stops abuse such as password guessing and scraping, and keeps costs under control.
 
@@ -222,5 +222,5 @@ Rate limiting stops one user from taking too much. Load shedding drops low-prior
 ---
 
 :::info[Next page]
-Rate limits protect request-and-response APIs. In [Chat System](./04-chat-system.md) the connection stays open and messages flow both ways, which needs new techniques.
+Rate limits protect request-and-response APIs. In [Chat System](./06-chat-system.md) the connection stays open and messages flow both ways, which needs new techniques.
 :::

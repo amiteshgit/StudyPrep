@@ -2,7 +2,7 @@
 id: video-streaming
 slug: /system-design/video-streaming
 title: Video Streaming
-sidebar_label: 7. Video Streaming
+sidebar_label: 9. Video Streaming
 description: Design a video streaming platform covering direct uploads, a parallel transcoding pipeline, adaptive bitrate streaming, CDN delivery, metadata, and view counts.
 ---
 
@@ -73,7 +73,7 @@ sequenceDiagram
     Q->>Q: Start processing
 ```
 
-This is the same trick used for photos in the [news feed](./05-news-feed.md) and attachments in [chat](./04-chat-system.md).
+This is the same trick used for photos in the [news feed](./07-news-feed.md) and attachments in [chat](./06-chat-system.md).
 
 ### 2. Transcoding pipeline in parallel
 
@@ -97,7 +97,7 @@ flowchart LR
     A --> M
 ```
 
-Workers take tasks from a queue, so you add workers when uploads spike. If one worker dies, only its chunk is redone. When all tasks finish, the video status changes to **ready** and the creator is notified, using the [notification system](./06-notification-system.md).
+Workers take tasks from a queue, so you add workers when uploads spike. If one worker dies, only its chunk is redone. When all tasks finish, the video status changes to **ready** and the creator is notified, using the [notification system](./08-notification-system.md).
 
 :::tip[Save money on unpopular videos]
 Most videos get very few views. Many platforms encode only a couple of common qualities at first, and create the rest only after a video becomes popular.
@@ -179,7 +179,7 @@ flowchart LR
     C --> PAGE["Watch page"]
 ```
 
-The same stream feeds analytics and recommendations. This is the same "record now, count later" idea as the click analytics in the [URL shortener](./02-url-shortener.md).
+The same stream feeds analytics and recommendations. This is the same "record now, count later" idea as the click analytics in the [URL shortener](./04-url-shortener.md).
 
 ---
 

@@ -20,7 +20,7 @@ Interview questions with **simple answers and working code**. Each answer starts
 | [Kubernetes](./kubernetes.md) | Explained with a shipping port picture: containers, pods, nodes, clusters, zones and regions, deployments, services, probes, and 8 interview questions |
 | [DSA](./dsa/index.md) | 15 LeetCode problems in 5 pages: arrays and strings, searching and linked lists, heaps and stacks, trees and graphs, and dynamic programming. Each has a diagram, a dry run, and a tested Java solution |
 | [AI Engineering](./ai-engineering.md) | The five most important steps for building products on AI models: define the problem, model and prompt, knowledge and tools (RAG), evaluation, and safe shipping, plus 7 interview questions |
-| [System Design](./system-design/index.md) | The building blocks (load balancers, caches, CDNs, databases, sharding, queues, CAP), then six classic designs: URL shortener, rate limiter, chat, news feed, notifications, and video streaming. Each lists its components and techniques, with a diagram for every technique |
+| [System Design](./system-design/index.md) | The building blocks (load balancers, caches, CDNs, databases, sharding, queues, CAP), distributed systems fundamentals (consistency, quorums, clocks, Raft, CRDTs), transactions across services (2PC, sagas, outbox, exactly-once, locks), then six classic designs: URL shortener, rate limiter, chat, news feed, notifications, and video streaming. Each lists its components and techniques, with a diagram for every technique |
 
 ## How to use these pages
 

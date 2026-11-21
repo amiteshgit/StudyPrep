@@ -2,7 +2,7 @@
 id: url-shortener
 slug: /system-design/url-shortener
 title: URL Shortener
-sidebar_label: 2. URL Shortener
+sidebar_label: 4. URL Shortener
 description: Design a URL shortener with unique ID generation, base62 codes, redirects, caching, sharding, and async click analytics.
 ---
 
@@ -188,5 +188,5 @@ One hot key lives in the cache, and redirects never reach the store. Keep a smal
 ---
 
 :::info[Next page]
-A viral link or a bad bot can flood any service. In [Rate Limiter](./03-rate-limiter.md) we build the guard that sits in front of systems like this one.
+A viral link or a bad bot can flood any service. In [Rate Limiter](./05-rate-limiter.md) we build the guard that sits in front of systems like this one.
 :::

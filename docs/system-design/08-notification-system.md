@@ -2,13 +2,13 @@
 id: notification-system
 slug: /system-design/notification-system
 title: Notification System
-sidebar_label: 6. Notification System
+sidebar_label: 8. Notification System
 description: Design a notification system covering per-channel queues, templates, user preferences, retries with backoff, dead-letter queues, deduplication, priorities, and rate limits.
 ---
 
 # Notification System
 
-The [news feed](./05-news-feed.md) waits for users to open the app. A **notification system** reaches out to them: phone push, SMS, and email. Almost every product needs one: order shipped, payment failed, someone replied to you.
+The [news feed](./07-news-feed.md) waits for users to open the app. A **notification system** reaches out to them: phone push, SMS, and email. Almost every product needs one: order shipped, payment failed, someone replied to you.
 
 The hard part isn't sending one message. It's sending **millions reliably**, through outside providers that are slow or sometimes down, **never twice**, and **never to someone who opted out**.
 
@@ -137,7 +137,7 @@ sequenceDiagram
     Note over W2: Skip sending, just ack
 ```
 
-There is still a small gap: the crash could happen after the key is saved but before the send. Many systems record the key as "sending", then "sent", and pass the same key to providers that support it, so the provider also ignores repeats.
+There is still a small gap: the crash could happen after the key is saved but before the send. Many systems record the key as "sending", then "sent", and pass the same key to providers that support it, so the provider also ignores repeats. This is the at-least-once plus idempotency rule from [exactly-once processing](./03-distributed-transactions.md#5-idempotent-consumers-and-exactly-once).
 
 ### 5. Priorities: urgent before bulk
 
@@ -159,7 +159,7 @@ Bulk sends are also **spread over time**. A campaign to 10 million users drips o
 
 ### 6. Rate limits per user
 
-**The idea:** even valid notifications become spam in large numbers. Limit how many each user gets, for example at most 3 marketing pushes a day, using the counters from the [rate limiter](./03-rate-limiter.md). Group many small events into one message.
+**The idea:** even valid notifications become spam in large numbers. Limit how many each user gets, for example at most 3 marketing pushes a day, using the counters from the [rate limiter](./05-rate-limiter.md). Group many small events into one message.
 
 ```mermaid
 flowchart LR
@@ -220,5 +220,5 @@ A scheduled-send store holds messages with a "send at" time. A job moves due mes
 ---
 
 :::info[Next page]
-The last design moves the heaviest data of all. In [Video Streaming](./07-video-streaming.md) we upload, process, and deliver huge video files to viewers worldwide.
+The last design moves the heaviest data of all. In [Video Streaming](./09-video-streaming.md) we upload, process, and deliver huge video files to viewers worldwide.
 :::

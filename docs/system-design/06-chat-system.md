@@ -2,7 +2,7 @@
 id: chat-system
 slug: /system-design/chat-system
 title: Chat System
-sidebar_label: 4. Chat System
+sidebar_label: 6. Chat System
 description: Design a chat app with WebSockets, message routing between servers, ordered storage, offline delivery, presence, group fan-out, and read receipts.
 ---
 
@@ -126,9 +126,9 @@ flowchart LR
     end
 ```
 
-**How do we get the order right?** Phone clocks are wrong all the time, so never sort by the phone's time. Give each message an ID from the server that **grows over time**, such as a Snowflake-style ID (timestamp, machine, sequence), or a counter per conversation. Order inside a chat is what matters. Order across chats doesn't.
+**How do we get the order right?** Phone clocks are wrong all the time, so never sort by the phone's time. Give each message an ID from the server that **grows over time**, such as a Snowflake-style ID (timestamp, machine, sequence), or a counter per conversation. Order inside a chat is what matters. Order across chats doesn't. Why clocks can't be trusted, and what to use instead, is covered in [logical clocks](./02-distributed-systems.md#5-time-and-ordering-logical-clocks).
 
-To load history, ask "the 50 messages before ID 1005". This is cursor pagination, which we use again in the [news feed](./05-news-feed.md).
+To load history, ask "the 50 messages before ID 1005". This is cursor pagination, which we use again in the [news feed](./07-news-feed.md).
 
 ### 4. Delivering to offline users
 
@@ -181,7 +181,7 @@ flowchart LR
     F --> D["Dan offline: push"]
 ```
 
-This is why chat apps cap group sizes. A message to a 100,000-member group would mean 100,000 deliveries. Very large groups work more like a [news feed](./05-news-feed.md), where members pull messages instead.
+This is why chat apps cap group sizes. A message to a 100,000-member group would mean 100,000 deliveries. Very large groups work more like a [news feed](./07-news-feed.md), where members pull messages instead.
 
 ### 7. Sent, delivered, and read ticks
 
@@ -224,10 +224,10 @@ The server still routes and stores messages but can't read them. Phones exchange
 
 **In short:** In object storage, not in the message store.
 
-The phone uploads the file directly to object storage using a short-lived upload link, then sends a normal message holding just the file's link. Receivers download through a CDN. We use the same direct-upload trick in [Video Streaming](./07-video-streaming.md).
+The phone uploads the file directly to object storage using a short-lived upload link, then sends a normal message holding just the file's link. Receivers download through a CDN. We use the same direct-upload trick in [Video Streaming](./09-video-streaming.md).
 
 ---
 
 :::info[Next page]
-Group chat showed what fan-out costs. In [News Feed](./05-news-feed.md) fan-out is the main problem: one post may need to reach millions of followers.
+Group chat showed what fan-out costs. In [News Feed](./07-news-feed.md) fan-out is the main problem: one post may need to reach millions of followers.
 :::

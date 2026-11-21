@@ -2,13 +2,13 @@
 id: news-feed
 slug: /system-design/news-feed
 title: News Feed
-sidebar_label: 5. News Feed
+sidebar_label: 7. News Feed
 description: Design a social news feed covering post publishing, fan-out on write vs read, the hybrid approach for celebrities, feed caches, ranking, cursor pagination, and media delivery.
 ---
 
 # News Feed
 
-In the [chat system](./04-chat-system.md), a group message went to a few hundred people. In a news feed, one post may need to reach **millions of followers**, and everyone expects their home page to load in a fraction of a second. The core question of this design is **when** to do that work: when the post is written, or when the feed is read.
+In the [chat system](./06-chat-system.md), a group message went to a few hundred people. In a news feed, one post may need to reach **millions of followers**, and everyone expects their home page to load in a fraction of a second. The core question of this design is **when** to do that work: when the post is written, or when the feed is read.
 
 ## What we build
 
@@ -215,5 +215,5 @@ The app checks every minute or so for posts newer than the top one it has, or re
 ---
 
 :::info[Next page]
-Feeds wait for users to come and look. In [Notification System](./06-notification-system.md) we go the other way and reach out to users by push, SMS, and email, reliably and without spamming them.
+Feeds wait for users to come and look. In [Notification System](./08-notification-system.md) we go the other way and reach out to users by push, SMS, and email, reliably and without spamming them.
 :::

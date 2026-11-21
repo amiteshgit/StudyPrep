@@ -200,7 +200,7 @@ flowchart LR
 | Write speed | Slower | Faster |
 | Risk | A slow follower slows every write | Followers can be a little behind (**replication lag**) |
 
-If the leader dies, a follower is **promoted** to be the new leader. With async copies, the last few writes may be lost.
+If the leader dies, a follower is **promoted** to be the new leader. With async copies, the last few writes may be lost. How the cluster safely picks that new leader is covered in [leader election](./02-distributed-systems.md#6-leader-election-and-consensus-raft). Leaderless databases use [quorums](./02-distributed-systems.md#4-quorums-how-many-copies-must-answer) instead.
 
 :::warning[Read-your-own-writes]
 A user updates their profile, refreshes, and sees the old one, because the read went to a follower that is behind. A common fix is to read from the leader for a few seconds after that user writes.
@@ -310,7 +310,7 @@ flowchart TD
 | --- | --- | --- |
 | Examples | Payments, stock levels, bookings | Social feeds, view counts, product reviews |
 
-**Eventual consistency** means that once the network heals, all copies catch up and agree. Most large systems use it for most data, and strong consistency only where it really matters.
+**Eventual consistency** means that once the network heals, all copies catch up and agree. Most large systems use it for most data, and strong consistency only where it really matters. The full range of options in between is covered in [consistency models](./02-distributed-systems.md#3-consistency-models-and-pacelc).
 
 ---
 
@@ -343,5 +343,5 @@ Consistent hashing keeps the other servers' keys in place. Protect the database 
 ---
 
 :::info[Next page]
-You now have the parts. In [URL Shortener](./02-url-shortener.md) we put them together for the first time in a small, read-heavy system.
+You now have the parts. Spreading data across machines raises hard questions: what if a node dies, who is in charge, which copy is right? [Distributed Systems Fundamentals](./02-distributed-systems.md) answers them before we start designing.
 :::
