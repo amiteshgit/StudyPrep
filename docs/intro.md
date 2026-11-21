@@ -17,6 +17,7 @@ Interview questions with **simple answers and working code**. Each answer starts
 | [Spring Boot](./spring-boot-interview.md) | 45 questions: basics, beans, configuration, web, data and transactions, production, security, testing, modern Boot, and design scenarios |
 | [Java](./java-interview.md) | 48 questions: core language, strings, collections, generics and streams, memory and the JVM, concurrency, modern Java, and design |
 | [IAM](./iam.md) | A short guide with diagrams: authentication vs authorization, SSO, JWT, OAuth 2.0 and OIDC, access control models, AWS IAM, and 8 interview questions |
+| [Kubernetes](./kubernetes.md) | Explained with a shipping port picture: containers, pods, nodes, clusters, zones and regions, deployments, services, probes, and 8 interview questions |
 
 ## How to use these pages
 
