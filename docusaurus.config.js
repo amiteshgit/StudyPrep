@@ -65,6 +65,7 @@ const config = {
               { label: '5. Dynamic Programming', to: '/dsa/dynamic-programming' },
             ],
           },
+          { to: '/ai-engineering', label: 'AI Engineering', position: 'left' },
           { href: 'https://github.com/amiteshgit/StudyPrep', label: 'GitHub', position: 'right' },
         ],
       },

@@ -19,6 +19,7 @@ Interview questions with **simple answers and working code**. Each answer starts
 | [IAM](./iam.md) | A short guide with diagrams: authentication vs authorization, SSO, JWT, OAuth 2.0 and OIDC, access control models, AWS IAM, and 8 interview questions |
 | [Kubernetes](./kubernetes.md) | Explained with a shipping port picture: containers, pods, nodes, clusters, zones and regions, deployments, services, probes, and 8 interview questions |
 | [DSA](./dsa/index.md) | 15 LeetCode problems in 5 pages: arrays and strings, searching and linked lists, heaps and stacks, trees and graphs, and dynamic programming. Each has a diagram, a dry run, and a tested Java solution |
+| [AI Engineering](./ai-engineering.md) | The five most important steps for building products on AI models: define the problem, model and prompt, knowledge and tools (RAG), evaluation, and safe shipping, plus 7 interview questions |
 
 ## How to use these pages
 
