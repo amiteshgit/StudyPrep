@@ -33,6 +33,12 @@ const config = {
           // Docs-only site: lessons live at the root, no blog
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
+          // Keep reference-only pages (reached by a link) out of the sidebar
+          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+            const hidden = new Set(['kubernetes-original']);
+            const items = await defaultSidebarItemsGenerator(args);
+            return items.filter((item) => !(item.type === 'doc' && hidden.has(item.id)));
+          },
         },
         blog: false,
         theme: { customCss: './src/css/custom.css' },
