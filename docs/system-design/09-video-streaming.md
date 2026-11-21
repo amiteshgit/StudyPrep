@@ -212,5 +212,5 @@ The streamer sends a continuous feed to an ingest server. It is transcoded on th
 ---
 
 :::info[Where to next]
-You have now seen the same building blocks reused in six designs. Go back to [Building Blocks](./01-building-blocks.md) and try to point at where each one appeared. For running these services in production, see [Kubernetes](../kubernetes.md). For securing them, see [IAM](../iam.md).
+You have now seen the same building blocks reused in six designs. Go back to [Building Blocks](./01-building-blocks.md) and try to point at where each one appeared. Then practise with the [System Design Q&A](../system-design-questions/01-how-would-you.md): short "how would you" questions and six harder designs. For running these services in production, see [Kubernetes](../kubernetes.md). For securing them, see [IAM](../iam.md).
 :::

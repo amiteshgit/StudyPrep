@@ -87,6 +87,8 @@ const config = {
               { label: '7. News Feed', to: '/system-design/news-feed' },
               { label: '8. Notification System', to: '/system-design/notification-system' },
               { label: '9. Video Streaming', to: '/system-design/video-streaming' },
+              { label: 'Q&A: How Would You...', to: '/system-design-questions' },
+              { label: 'Q&A: Complex Designs', to: '/system-design-questions/complex-designs' },
             ],
           },
           {
