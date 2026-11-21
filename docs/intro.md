@@ -18,6 +18,7 @@ Interview questions with **simple answers and working code**. Each answer starts
 | [Java](./java-interview.md) | 48 questions: core language, strings, collections, generics and streams, memory and the JVM, concurrency, modern Java, and design |
 | [IAM](./iam.md) | A short guide with diagrams: authentication vs authorization, SSO, JWT, OAuth 2.0 and OIDC, access control models, AWS IAM, and 8 interview questions |
 | [Kubernetes](./kubernetes.md) | Explained with a shipping port picture: containers, pods, nodes, clusters, zones and regions, deployments, services, probes, and 8 interview questions |
+| [DSA](./dsa/index.md) | 15 LeetCode problems in 5 pages: arrays and strings, searching and linked lists, heaps and stacks, trees and graphs, and dynamic programming. Each has a diagram, a dry run, and a tested Java solution |
 
 ## How to use these pages
 
