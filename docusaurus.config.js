@@ -56,7 +56,15 @@ const config = {
         items: [
           { to: '/spring-boot-interview', label: 'Spring Boot', position: 'left' },
           { to: '/java-interview', label: 'Java', position: 'left' },
-          { to: '/iam', label: 'IAM', position: 'left' },
+          {
+            type: 'dropdown',
+            label: 'IAM',
+            position: 'left',
+            items: [
+              { label: 'IAM Basics', to: '/iam' },
+              { label: 'OAuth 2.0 in Depth', to: '/iam/oauth' },
+            ],
+          },
           { to: '/kubernetes', label: 'Kubernetes', position: 'left' },
           {
             type: 'dropdown',

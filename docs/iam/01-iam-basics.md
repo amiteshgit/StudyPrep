@@ -2,8 +2,7 @@
 id: iam
 slug: /iam
 title: IAM (Identity and Access Management)
-sidebar_label: IAM
-sidebar_position: 4
+sidebar_label: 1. IAM Basics
 description: A short, clear guide to IAM with diagrams, flows, and interview questions.
 ---
 
@@ -173,6 +172,10 @@ Why so many steps? The browser only ever sees a **one-time code**, never the rea
 | **Refresh Token** | Getting a new access token quietly |
 | Implicit, Password | Old flows. No longer recommended |
 
+:::info[Want the full picture?]
+[OAuth 2.0 in Depth](./02-oauth.md) explains every part step by step: the roles, tokens, the authorization server, all grant types, and how OAuth fits an architecture of frontend apps and Java microservices that call each other.
+:::
+
 ---
 
 ## 6. Deciding what you can do (Authorization)
@@ -270,7 +273,7 @@ SecurityFilterChain api(HttpSecurity http) throws Exception {
 spring.security.oauth2.resourceserver.jwt.issuer-uri=https://idp.example.com/realms/demo
 ```
 
-Spring then checks the signature, expiry, and issuer for you. For the full setup, see the JWT question in [Spring Boot Interview Questions](./spring-boot-interview.md).
+Spring then checks the signature, expiry, and issuer for you. For the full setup, see the JWT question in [Spring Boot Interview Questions](../spring-boot-interview.md).
 
 ---
 
@@ -341,5 +344,5 @@ If you find yourself creating roles like `Manager-North-Under10k`, you have a "r
 ---
 
 :::info[Where to next]
-IAM sits at the front of every system. To see how it connects to code, read [Spring Boot Interview Questions](./spring-boot-interview.md), and for the language side see [Java Interview Questions](./java-interview.md).
+IAM sits at the front of every system. Next, go deeper with [OAuth 2.0 in Depth](./02-oauth.md). To see how it connects to code, read [Spring Boot Interview Questions](../spring-boot-interview.md), and for the language side see [Java Interview Questions](../java-interview.md).
 :::

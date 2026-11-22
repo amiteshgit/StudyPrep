@@ -538,5 +538,5 @@ Heap, metaspace, thread stacks, and native buffers all count toward the limit. S
 ---
 
 :::info[Where to next]
-Kubernetes is where your apps actually run. Revisit [Spring Boot Interview Questions](./spring-boot-interview.md) for the probes, graceful shutdown, and config ideas used here, and the [IAM](./iam.md) page for how access control and identities connect to RBAC and ServiceAccounts.
+Kubernetes is where your apps actually run. Revisit [Spring Boot Interview Questions](./spring-boot-interview.md) for the probes, graceful shutdown, and config ideas used here, and the [IAM](./iam/01-iam-basics.md) page for how access control and identities connect to RBAC and ServiceAccounts.
 :::

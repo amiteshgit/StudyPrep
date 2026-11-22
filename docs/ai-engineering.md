@@ -277,7 +277,7 @@ sequenceDiagram
 ```
 
 :::tip[The key safety idea]
-The model only **asks** for a tool call. **Your code** runs it. So your code decides if the call is allowed, checks the arguments, and applies the same access rules (see the [IAM](./iam.md) page) as for any other caller. Never trust a tool call just because the model produced it.
+The model only **asks** for a tool call. **Your code** runs it. So your code decides if the call is allowed, checks the arguments, and applies the same access rules (see the [IAM](./iam/01-iam-basics.md) page) as for any other caller. Never trust a tool call just because the model produced it.
 :::
 
 #### Agent or fixed workflow?
@@ -466,7 +466,7 @@ Use cheap checks first (contains a fact, valid format), add an LLM judge with a 
 
 **In short:** An attacker hides instructions in text the model reads, hoping it follows them.
 
-The text can come from the user, a web page, an email, or a retrieved document. No prompt can fully prevent it, so use **layers**: treat all outside text as data, give tools the **least privilege**, validate tool arguments in code, require human approval for risky actions, and filter outputs. The same least-privilege idea from the [IAM](./iam.md) page applies here.
+The text can come from the user, a web page, an email, or a retrieved document. No prompt can fully prevent it, so use **layers**: treat all outside text as data, give tools the **least privilege**, validate tool arguments in code, require human approval for risky actions, and filter outputs. The same least-privilege idea from the [IAM](./iam/01-iam-basics.md) page applies here.
 
 ### 5. Agent or fixed workflow: how do you choose?
 
@@ -493,5 +493,5 @@ Trim prompts and retrieved text, cache repeated work, route easy questions to a 
 ---
 
 :::info[Where to next]
-AI products run on the same foundations as any other service. For the platform side, revisit [Spring Boot Interview Questions](./spring-boot-interview.md) and [Kubernetes](./kubernetes.md). For access control that keeps tools and data safe, see [IAM](./iam.md). To design the systems around them at scale, continue with [System Design](./system-design/index.md).
+AI products run on the same foundations as any other service. For the platform side, revisit [Spring Boot Interview Questions](./spring-boot-interview.md) and [Kubernetes](./kubernetes.md). For access control that keeps tools and data safe, see [IAM](./iam/01-iam-basics.md). To design the systems around them at scale, continue with [System Design](./system-design/index.md).
 :::
