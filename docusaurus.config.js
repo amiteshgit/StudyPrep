@@ -63,6 +63,7 @@ const config = {
             items: [
               { label: 'IAM Basics', to: '/iam' },
               { label: 'OAuth 2.0 in Depth', to: '/iam/oauth' },
+              { label: 'TLS and Certificates', to: '/iam/tls' },
             ],
           },
           { to: '/kubernetes', label: 'Kubernetes', position: 'left' },

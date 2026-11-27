@@ -344,5 +344,5 @@ If you find yourself creating roles like `Manager-North-Under10k`, you have a "r
 ---
 
 :::info[Where to next]
-IAM sits at the front of every system. Next, go deeper with [OAuth 2.0 in Depth](./02-oauth.md). To see how it connects to code, read [Spring Boot Interview Questions](../spring-boot-interview.md), and for the language side see [Java Interview Questions](../java-interview.md).
+IAM sits at the front of every system. Next, go deeper with [OAuth 2.0 in Depth](./02-oauth.md), then [TLS and Certificates](./03-tls-and-certificates.md). To see how it connects to code, read [Spring Boot Interview Questions](../spring-boot-interview.md), and for the language side see [Java Interview Questions](../java-interview.md).
 :::

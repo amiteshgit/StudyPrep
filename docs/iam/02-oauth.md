@@ -701,5 +701,5 @@ APIs verify JWTs with cached public keys, so they don't notice at first. Within 
 ---
 
 :::info[Where to next]
-Go back to [IAM](./01-iam-basics.md) for the wider picture: authentication, access control models, and AWS IAM. For the Spring side, see the security questions in [Spring Boot Interview Questions](../spring-boot-interview.md). To see how the gateway and services fit together at scale, see [System Design](../system-design/index.md).
+Next, [TLS and Certificates](./03-tls-and-certificates.md) explains the layer under every token: keys, certificates, chains, the handshake, and mTLS. Go back to [IAM](./01-iam-basics.md) for the wider picture: authentication, access control models, and AWS IAM. For the Spring side, see the security questions in [Spring Boot Interview Questions](../spring-boot-interview.md). To see how the gateway and services fit together at scale, see [System Design](../system-design/index.md).
 :::
